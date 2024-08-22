@@ -16,7 +16,7 @@ export const EditBook = () => {
 
   useEffect(()=>{
     setLoading(true);
-    axios.get(`http://localhost:5555/books/${id}`)
+    axios.get(`https://mern-book-store-backend-nrpm.onrender.com/books/${id}`)
     .then((response)=>{
       setAuthor(response.data.author);
       setTitle(response.data.title);
@@ -37,7 +37,7 @@ export const EditBook = () => {
       publishYear
     }
     setLoading(true);
-    axios.put(`http://localhost:5555/books/${id}`, data)
+    axios.put(`https://mern-book-store-backend-nrpm.onrender.com/books/${id}`, data)
     .then((response)=>{
       setLoading(false);
       navigate('/');

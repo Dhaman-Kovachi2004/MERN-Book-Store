@@ -21,7 +21,7 @@ export const CreateBook = () => {
       publishYear
     }
     setLoading(true);
-    axios.post('http://localhost:5555/books', data)
+    axios.post('https://mern-book-store-backend-nrpm.onrender.com/books', data)
     .then((response)=>{
       setLoading(false);
       enqueueSnackbar("Book Created Successfully",{variant:'success'})
