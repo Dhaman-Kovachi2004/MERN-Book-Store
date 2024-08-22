@@ -12,7 +12,7 @@ export const DeleteBook = () => {
 
   const handleDeleteBok =()=>{
     setLoading(true);
-    axios.delete(`https://mern-book-store-backend-nrpm.onrender.com/books/${id}`)
+    axios.delete(`http://localhost:5555/books/${id}`)
     .then((response)=>{
       setLoading(false);
       enqueueSnackbar("Book Deleted Successfully",{variant:'success'})
