@@ -1,5 +1,5 @@
 import express from "express";
-import { PORT , mongodbURL} from "./config.js";
+import { port , mongodbURL} from "./config.js";
 import mongoose from "mongoose";
 import {Book} from "./models/bookModel.js"
 import bookRoutes from "./routes/bookRoutes.js"
@@ -33,8 +33,8 @@ mongoose
     .connect(mongodbURL)
     .then(()=>{
         console.log("App is connected to database");
-        app.listen(PORT,()=>{
-            console.log(`App is listening on PORT ${PORT}`);
+        app.listen(port,()=>{
+            console.log(`App is listening on PORT ${port}`);
         });
         
     })
